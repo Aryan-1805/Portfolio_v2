@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Aryan Bhutyal - Software Engineer Portfolio. Samsung PRISM Research Intern, Machine Learning & Web Development.">
+        
+        <!-- Favicon -->
+        <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
+        <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+        
+        <title>Aryan Bhutyal - Software Engineer Portfolio</title>
+        
+        <!-- Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        <!-- EmailJS -->
+        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+    </head>
+    
+    
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loader">
+            <div class="loader-text">Loading...</div>
+        </div>
+    </div>
+
+   <!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <img src="./assets/images/favicon-32x32.png" alt="AB Logo" class="logo-icon">
+            <a href="#home">Aryan Bhutyal</a>
+        </div>
+        <div class="nav-menu" id="nav-menu">
+            <a href="#home" class="nav-link active">Home</a>
+            <a href="#about" class="nav-link">About</a>
+            <a href="#experience" class="nav-link">Experience</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#certifications" class="nav-link">Certifications</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact</a>
+        </div>
+        <div class="nav-toggle" id="nav-toggle">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+    </div>
+</nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <span class="greeting">👋 Hello, I'm</span>
+                    <h1 class="hero-title">
+                        <span class="name-highlight">Aryan Bhutyal</span>
+                    </h1>
+                    <div class="typing-container">
+                        <span class="typing-text" id="typing-text">Aspiring Software Engineer</span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <p class="hero-description">
+                        Samsung PRISM Research Intern passionate about Machine Learning and competitive programming. 
+                        Currently pursuing B.Tech at SRM Institute with 9.73 CGPA and 100+ LeetCode problems solved.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#projects" class="btn btn-primary">View My Work</a>
+                        <a href="./assets/documents/Aryan resume new.docx" class="btn btn-secondary" download>
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/aryan-bhutyal-257aa3212/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/Aryan-1805" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:aryanbhutyal@gmail.com" aria-label="Email">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-container">
+                        <img src="./assets/images/profile.jpeg" alt="Aryan Bhutyal - Software Engineer" />
+                        <div class="floating-elements">
+                            <div class="tech-badge" data-aos="fade-up" data-aos-delay="100">Python</div>
+                            <div class="tech-badge" data-aos="fade-up" data-aos-delay="200">TensorFlow</div>
+                            <div class="tech-badge" data-aos="fade-up" data-aos-delay="300">Java</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+ <!-- About Section -->
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="section-header">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">Get to know more about my journey</p>
+        </div>
+        
+        <div class="about-content">
+            <div class="about-text">
+                <!-- Add profile photo here -->
+                <div class="about-image">
+                    <img src="./assets/images/about.png" alt="Aryan Bhutyal - About Me" />
+                </div>
+                
+                <p class="about-description">
+                    I'm a third-year Computer Science student at SRM Institute of Science and Technology with exceptional 
+                    academic performance (9.73 CGPA). Currently working as a Research Intern at Samsung R&D Bangalore under 
+                    the prestigious PRISM initiative, focusing on algorithm development and optimization for real-world problems. 
+                    My expertise spans competitive programming, machine learning, and full-stack development.
+                </p>
+                
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="100">0</div>
+                        <div class="stat-label">LeetCode Problems</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="9.73">0</div>
+                        <div class="stat-label">CGPA</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number" data-target="6">0</div>
+                        <div class="stat-label">Certifications</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="skills-overview">
+                <h3>What I Do</h3>
+                <div class="skill-categories">
+                    <div class="skill-category">
+                        <i class="fas fa-brain"></i>
+                        <h4>Machine Learning & AI</h4>
+                        <p>Building intelligent systems with TensorFlow, OpenCV, and deep learning techniques</p>
+                    </div>
+                    <div class="skill-category">
+                        <i class="fas fa-code"></i>
+                        <h4>Competitive Programming</h4>
+                        <p>Strong foundation in DSA with 100+ LeetCode problems and algorithm optimization</p>
+                    </div>
+                    <div class="skill-category">
+                        <i class="fas fa-laptop-code"></i>
+                        <h4>Full-Stack Development</h4>
+                        <p>Creating responsive web applications with modern technologies and frameworks</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Professional Experience</h2>
+                <p class="section-subtitle">My journey in software development and research</p>
+            </div>
+            
+            <div class="experience-timeline">
+                <!-- Current Samsung Internship -->
+                <div class="experience-item featured">
+                    <div class="experience-date">
+                        <span class="year">Mar 2025 - Present</span>
+                        <span class="status">Current</span>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="position-title">Research Intern</h3>
+                            <h4 class="company-name">Samsung R&D Bangalore</h4>
+                            <span class="program">Samsung PRISM Initiative</span>
+                            <span class="location">Bangalore, India</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Working on research-driven projects under Samsung PRISM initiative</li>
+                            <li>Developing and optimizing algorithms for real-world problems</li>
+                            <li>Collaborating with industry professionals to build innovative solutions</li>
+                            <li>Contributing to cutting-edge research in software development</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">Algorithm Development</span>
+                            <span class="tech-tag">Research</span>
+                            <span class="tech-tag">Problem Solving</span>
+                            <span class="tech-tag">Innovation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- IIT Jammu Internship -->
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="year">Dec 2024</span>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="position-title">Machine Learning Intern</h3>
+                            <h4 class="company-name">Indian Institute of Technology (IIT) Jammu</h4>
+                            <span class="location">Jammu, India</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Learned advanced ML concepts, model training and evaluation in Python</li>
+                            <li>Applied ML techniques including regression, classification, and clustering</li>
+                            <li>Built hands-on projects using ML pipelines and data preprocessing</li>
+                            <li>Gained practical experience with industry-standard ML workflows</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Machine Learning</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">Data Analysis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Academic Excellence -->
+                <div class="experience-item">
+                    <div class="experience-date">
+                        <span class="year">2023 - Present</span>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3 class="position-title">Computer Science Student</h3>
+                            <h4 class="company-name">SRM Institute of Science and Technology</h4>
+                            <span class="location">Chennai, India</span>
+                        </div>
+                        <ul class="experience-description">
+                            <li>Maintaining exceptional academic performance with 9.73 CGPA</li>
+                            <li>Completed 100+ LeetCode problems for algorithm mastery</li>
+                            <li>Built multiple real-world projects across Web, ML, and Java domains</li>
+                            <li>Achieved Top 15K ranking in NPTEL Java Programming certification</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span class="tech-tag">Data Structures</span>
+                            <span class="tech-tag">Algorithms</span>
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Technical Skills</h2>
+                <p class="section-subtitle">Technologies and tools I work with</p>
+            </div>
+            
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">C/C++</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Web Development -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>Web Development</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">HTML/CSS</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <span class="skill-level">Learning</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="60%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Node.js</span>
+                                <span class="skill-level">Basic</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="50%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Machine Learning & AI -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>Machine Learning & AI</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">TensorFlow</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">OpenCV</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">NumPy/Pandas</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Keras</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools & Databases -->
+                <div class="skill-category-card">
+                    <div class="category-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools & Databases</h3>
+                    </div>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="75%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">Git</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="70%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">MATLAB</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="65%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span class="skill-name">LeetCode</span>
+                                <span class="skill-level">100+ Solved</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="55%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Certifications & Achievements</h2>
+                <p class="section-subtitle">Professional certifications and academic achievements</p>
+            </div>
+            
+            <div class="certifications-grid">
+                <div class="cert-item">
+                    <div class="cert-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h4>AWS Academy Cloud Foundations</h4>
+                    <p class="cert-date">April 2025</p>
+                </div>
+                
+                <div class="cert-item">
+                    <div class="cert-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                    <h4>Oracle Cloud Infrastructure 2024 Certified</h4>
+                    <p class="cert-date">March 2025 - March 2027</p>
+                </div>
+                
+                <div class="cert-item">
+                    <div class="cert-icon">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <h4>AWS Academy Machine Learning Foundations</h4>
+                    <p class="cert-date">April 2025</p>
+                </div>
+                
+                <div class="cert-item">
+                    <div class="cert-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h4>NPTEL Java Programming (IIT Kharagpur)</h4>
+                    <p class="cert-date">October 2024 - Score: 65%</p>
+                </div>
+                
+                <div class="cert-item">
+                    <div class="cert-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h4>Deep Learning & ML Onramp (MathWorks)</h4>
+                    <p class="cert-date">April 2025</p>
+                </div>
+                
+                <div class="cert-item">
+                    <div class="cert-icon">
+                        <i class="fas fa-image"></i>
+                    </div>
+                    <h4>Image Processing & MATLAB Onramp (MathWorks)</h4>
+                    <p class="cert-date">February 2025</p>
+                </div>
+            </div>
+            
+            <div class="achievements-highlight">
+                <div class="achievement-item">
+                    <div class="achievement-number">100+</div>
+                    <div class="achievement-label">LeetCode Problems Solved</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">9.73</div>
+                    <div class="achievement-label">CGPA (3 Semesters)</div>
+                </div>
+                <div class="achievement-item">
+                    <div class="achievement-number">Top 15K</div>
+                    <div class="achievement-label">NPTEL Java Ranking</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Some of my recent work</p>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Face Mask Detection - Featured Project -->
+                <div class="project-card featured">
+                    <div class="project-image">
+                        <img src="./assets/images/face-mask-detection.png" alt="Face Mask Detection System" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Aryan-1805/Face-mask-detector" class="project-link" aria-label="View Code">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="#" class="project-link" aria-label="Live Demo">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Face Mask Detection System</h3>
+                            <span class="project-status">ML Project</span>
+                        </div>
+                        <p class="project-description">
+                            Real-time face mask detection system using OpenCV and TensorFlow. 
+                            Trained CNN to classify masked/unmasked faces for public safety applications.
+                            Can be integrated with surveillance systems.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">OpenCV</span>
+                            <span class="tech-tag">TensorFlow</span>
+                            <span class="tech-tag">CNN</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/images/pomodoro.png" alt="Pomodoro Timer" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Aryan-1805/Pomodoro" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://pomodoro-nine-inky.vercel.app/" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Pomodoro Timer</h3>
+                        <p class="project-description">
+                            HTML, CSS, JavaScript-based productivity timer with alerts and reset/start options.
+                            Enhances user focus through 25-min work / 5-min break cycles.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/images/portfolio.png" alt="Portfolio Website" />
+                        <div class="project-overlay">
+                            <div class="project-links">
+                                <a href="https://github.com/Aryan-1805/Portfolio" class="project-link">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                                <a href="https://portfolio-sage-theta-57.vercel.app/" class="project-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Portfolio Website</h3>
+                        <p class="project-description">
+                            Responsive portfolio website developed with HTML/CSS/JS and deployed on Vercel.
+                            Showcases projects, contact info, and technical skills with modern design.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Vercel</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Let's work together on your next project</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:aryanbhutyal@gmail.com">aryanbhutyal@gmail.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>LinkedIn</h4>
+                            <a href="https://linkedin.com/in/aryan-bhutyal-257aa3212/" target="_blank">Aryan Bhutyal</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>GitHub</h4>
+                            <a href="https://github.com/Aryan-1805" target="_blank">@Aryan-1805</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <a href="tel:+919541358388">+91-9541358388</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>&copy; 2025 Aryan Bhutyal. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#experience">Experience</a>
+                    <a href="#skills">Skills</a>
+                    <a href="#certifications">Certifications</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+</body>
+</html>
