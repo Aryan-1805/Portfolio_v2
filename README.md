@@ -6,7 +6,7 @@ A modern, responsive portfolio website showcasing my journey as a Software Engin
 
 ## 🌟 Live Demo
 
-**Website:** [https://portfolio-sage-theta-57.vercel.app/](https://portfolio-sage-theta-57.vercel.app/)
+**Website:** [https://portfolio-sage-theta-57.vercel.app/](https://portfolio-v2-three-lyart.vercel.app/)
 
 ## 📋 Table of Contents
 
