@@ -25,6 +25,7 @@ const contactForm = document.getElementById('contact-form');
 
 // Typing Animation Data
 const typingTexts = [
+    'HighRadius Product Intern',
     'PayU Research Intern',
     'Agentic AI Developer',
     'Samsung PRISM Alumnus',
