@@ -3,7 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Aryan Bhutyal - Software Engineer Portfolio. Samsung PRISM Research Intern, Machine Learning & Web Development.">
+        <meta name="description" content="Aryan Bhutyal - Portfolio. Incoming Product Intern at HighRadius, former Research Intern at PayU & Samsung R&D Bangalore, specializing in Machine Learning and Software Engineering.">
+        
+        <!-- OpenGraph Meta Tags for LinkedIn / Twitter -->
+        <meta property="og:title" content="Aryan Bhutyal - Portfolio">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="Incoming Product Intern at HighRadius, former Research Intern at PayU & Samsung R&D Bangalore. SRM CSE (9.72 CGPA, 300+ LeetCode solved).">
+        <meta property="og:image" content="./assets/images/about.png">
+        <meta property="og:url" content="https://github.com/Aryan-1805/Portfolio_v2">
         
         <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="./assets/images/favicon.ico">
@@ -54,10 +61,15 @@
             <a href="#projects" class="nav-link">Projects</a>
             <a href="#contact" class="nav-link">Contact</a>
         </div>
-        <div class="nav-toggle" id="nav-toggle">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
+        <div class="nav-actions">
+            <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                <i class="fas fa-moon"></i>
+            </button>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
         </div>
     </div>
 </nav>
@@ -603,7 +615,13 @@
                 <!-- ClinXplain - Featured Project -->
                 <div class="project-card featured">
                     <div class="project-image">
-                        <img src="./assets/images/projects/clinxplain.png" alt="ClinXplain System" onerror="this.src='./assets/images/about.png'"/>
+                        <div class="project-image-fallback clinxplain-gradient">
+                            <svg class="project-fallback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
+                                <rect x="5" y="2" width="14" height="6" rx="1"/>
+                            </svg>
+                            <span class="fallback-label">Ontology CDSS</span>
+                        </div>
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://github.com/Aryan-1805" class="project-link" aria-label="View Code" target="_blank">
@@ -633,7 +651,16 @@
                 <!-- Malaria Classification -->
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="./assets/images/projects/malaria.png" alt="Malaria CNN Ensemble" onerror="this.src='./assets/images/about.png'"/>
+                        <div class="project-image-fallback malaria-gradient">
+                            <svg class="project-fallback-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="11" cy="11" r="8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                                <circle cx="11" cy="11" r="3" fill="currentColor" opacity="0.15"/>
+                                <circle cx="14" cy="8" r="1.2" fill="currentColor"/>
+                                <circle cx="8" cy="12" r="1.5" fill="currentColor"/>
+                            </svg>
+                            <span class="fallback-label">Deep Learning CNN</span>
+                        </div>
                         <div class="project-overlay">
                             <div class="project-links">
                                 <a href="https://github.com/Aryan-1805" class="project-link" target="_blank">

@@ -60,6 +60,7 @@ function initializeApp() {
     initializeProgressBar();
     initializeParallaxEffects();
     initializeLazyLoading();
+    initializeThemeToggle();
     
     // Set initial active section
     updateActiveNavLink();
@@ -1339,4 +1340,55 @@ console.log(`
             console.log('🎉 Portfolio application fully initialized');
         }, 2000);
     });
+}
+
+// Theme Toggle Functionality
+function initializeThemeToggle() {
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    if (!themeToggleBtn) return;
+
+    const icon = themeToggleBtn.querySelector('i');
+    
+    // Check saved preference or system preference
+    const savedTheme = localStorage.getItem('portfolio-theme');
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    
+    const isDark = savedTheme === 'dark' || (!savedTheme && systemPrefersDark);
+    
+    if (isDark) {
+        document.body.classList.add('dark-theme');
+        if (icon) {
+            icon.className = 'fas fa-sun';
+        }
+    } else {
+        document.body.classList.remove('dark-theme');
+        if (icon) {
+            icon.className = 'fas fa-moon';
+        }
+    }
+
+    themeToggleBtn.addEventListener('click', () => {
+        const isCurrentDark = document.body.classList.contains('dark-theme');
+        
+        if (isCurrentDark) {
+            document.body.classList.remove('dark-theme');
+            localStorage.setItem('portfolio-theme', 'light');
+            if (icon) {
+                icon.className = 'fas fa-moon';
+                icon.style.transform = 'rotate(180deg)';
+                setTimeout(() => { icon.style.transform = 'none'; }, 200);
+            }
+            trackEvent('theme', 'switch', 'light');
+        } else {
+            document.body.classList.add('dark-theme');
+            localStorage.setItem('portfolio-theme', 'dark');
+            if (icon) {
+                icon.className = 'fas fa-sun';
+                icon.style.transform = 'rotate(180deg) scale(1.1)';
+                setTimeout(() => { icon.style.transform = 'none'; }, 200);
+            }
+            trackEvent('theme', 'switch', 'dark');
+        }
+    });
+}
     

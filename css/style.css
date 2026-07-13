@@ -4,23 +4,39 @@
     --secondary-color: #1e40af;
     --accent-color: #3b82f6;
     --text-primary: #1f2937;
-    --text-secondary: #6b7280;
-    --text-light: #9ca3af;
+    --text-secondary: #4b5563;
+    --text-light: #6b7280;
     --bg-primary: #ffffff;
     --bg-secondary: #f8fafc;
     --bg-dark: #0f172a;
     --border-color: #e5e7eb;
-    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.1);
-    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.1);
-    --shadow-heavy: 0 10px 25px rgba(0, 0, 0, 0.15);
-    --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.08);
+    --shadow-heavy: 0 10px 25px rgba(0, 0, 0, 0.12);
+    --gradient-primary: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    --gradient-secondary: linear-gradient(135deg, #f43f5e 0%, #d946ef 100%);
     --transition-fast: 0.2s ease;
     --transition-medium: 0.3s ease;
     --transition-slow: 0.5s ease;
     --border-radius: 8px;
     --border-radius-lg: 12px;
     --max-width: 1200px;
+    --transition-theme: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Dark Theme Color Tokens */
+body.dark-theme {
+    --bg-primary: #0b0f19;
+    --bg-secondary: #111827;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-light: #64748b;
+    --border-color: #1e293b;
+    --shadow-light: 0 1px 3px rgba(0, 0, 0, 0.4);
+    --shadow-medium: 0 4px 6px rgba(0, 0, 0, 0.3);
+    --shadow-heavy: 0 10px 25px rgba(0, 0, 0, 0.5);
+    --gradient-primary: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    --gradient-secondary: linear-gradient(135deg, #ec4899 0%, #f43f5e 100%);
 }
 
 /* Reset and Base Styles */
@@ -41,6 +57,7 @@ body {
     color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
+    transition: var(--transition-theme);
 }
 
 /* Loading Screen */
@@ -184,17 +201,62 @@ a {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.5);
     z-index: 1000;
-    transition: var(--transition-medium);
+    transition: var(--transition-theme);
 }
 
 .navbar.scrolled {
-    backdrop-filter: blur(15px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-medium);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.theme-toggle-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-primary);
+    cursor: pointer;
+    font-size: 1.25rem;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transition: var(--transition-theme), transform 0.2s ease;
+}
+
+.theme-toggle-btn:hover {
+    background: var(--border-color);
+    color: var(--primary-color);
+    transform: rotate(15deg) scale(1.1);
+}
+
+/* Dark Mode Navbar Specifics */
+body.dark-theme .navbar {
+    background: rgba(11, 15, 25, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .navbar.scrolled {
+    background: rgba(11, 15, 25, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .theme-toggle-btn:hover {
+    color: #f59e0b; /* Yellow warning color for sun hover */
 }
 
 .nav-container {
@@ -2040,20 +2102,19 @@ img {
 .progress-bar {
     width: 100%;
     height: 4px;
-    background: var(--border-color);
-    border-radius: 2px;
-    overflow: hidden;
+    background: transparent;
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1001;
+    z-index: 2000;
 }
 
 .progress-bar-fill {
     height: 100%;
-    background: var(--gradient-primary);
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+    box-shadow: 0 0 8px rgba(139, 92, 246, 0.8), 0 0 15px rgba(139, 92, 246, 0.5);
     width: 0%;
-    transition: width 0.3s ease;
+    transition: width 0.1s ease;
 }
 
 /* Custom Scrollbar */
@@ -2178,4 +2239,147 @@ img {
     .image-container img {
         animation: none !important;
     }
+}
+
+/* ==========================================
+   PREMIUM PORTFOLIO ENHANCEMENTS
+   ========================================== */
+
+/* Smooth Transitions for Theme Swapping */
+body, section, .navbar, .navbar.scrolled, .skill-category-card, .project-card, .cert-item, .experience-item, .contact-item, input, textarea, button, footer {
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Base Dark Theme Specific overrides */
+body.dark-theme {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+body.dark-theme section {
+    background-color: var(--bg-primary);
+}
+
+body.dark-theme .about-section,
+body.dark-theme .skills-section,
+body.dark-theme .certifications-section,
+body.dark-theme .contact-section {
+    background-color: var(--bg-secondary);
+}
+
+body.dark-theme .navbar {
+    background: rgba(11, 15, 25, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-theme .navbar.scrolled {
+    background: rgba(11, 15, 25, 0.85);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+body.dark-theme .skill-category-card,
+body.dark-theme .project-card,
+body.dark-theme .cert-item,
+body.dark-theme .experience-item,
+body.dark-theme .contact-item,
+body.dark-theme form {
+    background: var(--bg-secondary);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .form-group input,
+body.dark-theme .form-group textarea {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+    color: var(--text-primary);
+}
+
+body.dark-theme .tech-tag {
+    background: var(--bg-primary);
+    color: var(--primary-color);
+    border-color: var(--border-color);
+}
+
+body.dark-theme .project-link {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+body.dark-theme .project-link:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+/* Interactive 3D tilt & neon hover for Cards */
+.project-card, .skill-category-card, .cert-item, .contact-item {
+    transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.15);
+    border-color: var(--accent-color);
+}
+
+.skill-category-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 10px 25px rgba(124, 58, 237, 0.12);
+    border-color: #8b5cf6;
+}
+
+.cert-item:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--primary-color);
+}
+
+.contact-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-medium);
+    border-color: var(--accent-color);
+}
+
+/* Fallback Gradients for Projects */
+.project-image-fallback {
+    width: 100%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding: 2rem;
+}
+
+.clinxplain-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #2563eb 100%);
+}
+
+.malaria-gradient {
+    background: linear-gradient(135deg, #0f172a 0%, #1a1b3a 50%, #7c3aed 100%);
+}
+
+.project-fallback-icon {
+    width: 56px;
+    height: 56px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.75rem;
+    z-index: 2;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.3));
+    animation: fallbackPulse 3s ease-in-out infinite;
+}
+
+@keyframes fallbackPulse {
+    0%, 100% { transform: scale(1); opacity: 0.9; }
+    50% { transform: scale(1.06); opacity: 1; }
+}
+
+.fallback-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    z-index: 2;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
 }
