@@ -116,7 +116,7 @@ Portfolio/
 │   │   ├── favicon.ico    # Website favicon
 │   │   └── projects/      # Project screenshots
 │   └── documents/
-│       └── resume.docx    # Downloadable resume
+│       └── resume.pdf     # Downloadable resume
 ├── README.md              # Project documentation
 └── .gitignore            # Git ignore rules
 ```

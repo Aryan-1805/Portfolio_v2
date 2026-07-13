@@ -25,12 +25,11 @@ const contactForm = document.getElementById('contact-form');
 
 // Typing Animation Data
 const typingTexts = [
-    'Aspiring Software Engineer',
-    'Samsung PRISM Intern',
-    'Machine Learning Enthusiast',
-    'Competitive Programmer',
-    'Full-Stack Developer',
-    'Problem Solver'
+    'PayU Research Intern',
+    'Agentic AI Developer',
+    'Samsung PRISM Alumnus',
+    'Machine Learning Engineer',
+    'Competitive Programmer'
 ];
 
 // Initialize Application
