@@ -1340,7 +1340,6 @@ console.log(`
             console.log('🎉 Portfolio application fully initialized');
         }, 2000);
     });
-}
 
 // Theme Toggle Functionality
 function initializeThemeToggle() {
